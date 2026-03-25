@@ -6,11 +6,23 @@
     <meta name="author" content="Nicolas Mady">
     <meta name="keywords" content="IComp, UFAM, Programação Web">
     <meta name="description" content="aprendendo prog web">
+    <!-- <meta http-equiv="refresh" content="5;url=https://www.google.com/"> -->
+    <meta name="robots" content="index, follow">
+    <!-- <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="nofollow"> -->
     <title>teste</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    h1 {
+        color: blue;
+    }
+    </style>
 </head>
 <body>
     <img src="imgs/im.jpg" alt="imagem de exemplo" width="600">
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h1>
+    <h1 style="color: green;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h1>
     <p>Lorem ipsum dolor sit <strong>amet</strong> consectetur adipisicing elit. <br> Veniam fugiat necessitatibus, consequatur earum exercitationem ut beatae adipisci corporis, laudantium, iusto magnam porro dignissimos ex totam alias perferendis enim temporibus ullam?</p>
     H<sub>2</sub>O
     x<sup>2</sup>
@@ -19,9 +31,9 @@
     <hr size="5" width="50%" color="red" align="left">
     <div id="div1" data-author="nic" data-num="537"></div>
     <pre>
-function teste() {
-    console.log("teste");
-}
+    function teste() {
+        console.log("teste");
+    }
     </pre>
 
     <ul type="square">
@@ -123,6 +135,27 @@ function teste() {
             </tr>
         </tfoot>
     </table>
+    <br><br>
+
+    <form name="login" action="/processa" method="post">
+        <input type="text" name="username" id=""><br>
+        <input type="password" name="password" id=""><br>
+
+        <button type="submit">Entrar</button>
+
+        <fieldset id="curso">
+            <legend>Selecione seu curso</legend>
+
+            <input type="radio" name="curso" id="cc" value="CC">
+            <label for="cc">Ciência da Computação</label><br>
+
+            <input type="radio" name="curso" id="es" value="ES">
+            <label for="es">Engenharia de Software</label><br>
+
+            <input type="radio" name="curso" id="ec" value="EC">
+            <label for="ec">Engenharia da Computação</label><br>
+        </fieldset>
+    </form>
 
 </body>
 </html>
