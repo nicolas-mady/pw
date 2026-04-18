@@ -15,8 +15,33 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
+
+    <style>
+        p { border: 2px double black; }
+        p.newclass { background-color: grey; color: white; }
+    </style>
 </head>
+
+
 <body>
+    <a href="#" id="troca-logo">Trocar Logo</a>
+    <img id="img" height="200">
+
+    <p id="icomp">Instituto de Computação</p>
+    <button id="pressme">Adicionar Classe</button>
+    <button id="add">Adicionar Estilos</button>
+    <button id="clean">Limpar Estilo</button>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+
     <img src="../imgs/im.jpg" alt="imagem de exemplo" width="600" id="lake"><br>
 
     <button>MOVE</button>
@@ -170,13 +195,14 @@
     <p id="align-text">
         A propriedade CSS text-align é usada para definir o alinhamento horizontal do texto dentro de um elemento. Ela pode ser aplicada a elementos de bloco, como parágrafos, divs e cabeçalhos. Os valores comuns para text-align incluem:
     </p>
-    <button class="align">Esquerda</button>
-    <button class="align">Centro</button>
-    <button class="align">Justificado</button>
-    <button class="align">Direita</button>
+    <div class="align">
+        <button class="align_button">Esquerda</button>
+        <button class="align_button">Centro</button>
+        <button class="align_button">Justificado</button>
+        <button class="align_button">Direita</button>
+    </div>
 
     <br>
     <br>
-
 </body>
 </html>

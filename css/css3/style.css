@@ -1,3 +1,11 @@
-.yellow { margin: -200px 100px; }
-.red { margin: 50px 200px; }
-.green { margin: -50px 100px; }
+.yellow {
+    margin: -200px 100px;
+}
+
+.red {
+    margin: 50px 200px;
+}
+
+.green {
+    margin: -50px 100px;
+}

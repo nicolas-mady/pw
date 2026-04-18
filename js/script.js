@@ -24,7 +24,7 @@ botoes.forEach(botao => {
 //     };
 // }
 
-const alignButtons = document.querySelectorAll('.align');
+const alignButtons = document.querySelectorAll('.align_button');
 const alignText = document.querySelector('#align-text');
 
 alignButtons.forEach(button => {
@@ -39,3 +39,48 @@ alignButtons.forEach(button => {
         alignText.style.textAlign = textAlign;
     });
 });
+
+const botao = document.getElementById("pressme");
+botao.onclick = function(e){
+    const icomp = document.getElementById("icomp");
+    icomp.className += " newclass";
+    icomp.style.cssText = "color:red";
+    icomp.style.fontSize = "32px";
+    icomp.style.color = "red";  
+};
+
+
+// const icomp = document.getElementById("icomp");
+// // const botao = document.getElementById("pressme");
+// botao.onclick = function(){
+//     icomp.style.cssText = "color:red";
+// }
+
+
+document.getElementById("add").onclick = function() {
+icomp.style.setProperty("background-color", "lightgray");
+icomp.style.setProperty("color", "red");
+icomp.style.setProperty("font-size", "32px");
+}
+document.getElementById("clean").onclick = function() {
+icomp.style.removeProperty("background-color");
+icomp.style.removeProperty("color");
+icomp.style.removeProperty("font-size");
+}
+
+
+
+const htmlLogo = new Image();
+const lakeImg = new Image();
+htmlLogo.setAttribute('src', '../imgs/logo-html.png');
+lakeImg.setAttribute('src', '../imgs/im.jpg');
+const troca = document.getElementById("troca-logo");
+troca.onclick = function () {
+    let logo = document.getElementById("img");
+
+    if (logo.getAttribute('src') == htmlLogo.getAttribute('src')) {
+        logo.setAttribute('src', lakeImg.getAttribute('src'));
+    } else {
+        logo.setAttribute('src', htmlLogo.getAttribute('src'));
+    }
+}
