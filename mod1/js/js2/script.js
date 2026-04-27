@@ -1,7 +1,7 @@
 function jokenpo(pts=0) {
     options = ["Pedra", "Papel", "Tesoura"];
     console.log("Escolha sua jogada:\n1 - Pedra\n2 - Papel\n3 - Tesoura");
-    input = prompt();
+    const input = require("fs").readFileSync("/dev/stdin", "utf-8").trim();
     try {
         u = options[parseInt(input) - 1];
     } catch (error) {

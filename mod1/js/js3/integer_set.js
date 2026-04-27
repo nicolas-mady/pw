@@ -51,28 +51,30 @@ class IntegerSet {
         return res;
     }
 
-    toString() {
-        const string = this.arr
+    toStr() {
+        const string = (
+            this.arr
             .map((v, i) => v ? i : null)
             .filter(v => v !== null)
-            .join(', ');
+            .join(', ')
+        );
         return string ? `{ ${string} }` : '{}';
     }
 }
 
 const s1 = new IntegerSet(10);
 s1.insert(1, 3, 5, 7, 9);
-console.log(s1.toString()); // { 1, 3, 5, 7, 9 }
+console.log(s1.toStr()); // { 1, 3, 5, 7, 9 }
 
 const s2 = new IntegerSet(10);
 s2.insert(0, 2, 4, 6, 8);
-console.log(s2.toString()); // { 0, 2, 4, 6, 8 }
+console.log(s2.toStr()); // { 0, 2, 4, 6, 8 }
 
 const unionSet = s1.union(s2);
-console.log(unionSet.toString()); // { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+console.log(unionSet.toStr()); // { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
 
 const intersectionSet = s1.intersection(s2);
-console.log(intersectionSet.toString()); // {}
+console.log(intersectionSet.toStr()); // {}
 
 const differenceSet = s1.difference(s2);
-console.log(differenceSet.toString()); // { 1, 3, 5, 7, 9 }
+console.log(differenceSet.toStr()); // { 1, 3, 5, 7, 9 }
