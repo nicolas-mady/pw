@@ -1,14 +1,14 @@
-const { log } = require('console');
-const fs = require('fs');
-const path = require('path');
+// const { log } = require('console');
+// const fs = require('fs');
+// const path = require('path');
 
-fs.readdir(__dirname, (err, files) => {
-  if (err) {
-    console.error('Error reading directory:', err);
-    return;
-  }
-  console.log('Directory contents:', files);
-});
+// fs.readdir(process.cwd(), (err, files) => {
+//   if (err) {
+//     console.error('Error reading directory:', err);
+//     return;
+//   }
+//   console.log('Directory contents:', files);
+// });
 
 // const base_name = 'example.txt';
 
@@ -111,3 +111,20 @@ fs.readdir(__dirname, (err, files) => {
 //   }
 //   console.log('File has been renamed successfully.');
 // });
+
+// icomp = "Instituto de Computação";
+
+
+
+
+const fsPromises = require('fs').promises;
+const readFile = async (filePath) => {
+  try {
+    return await fsPromises.readFile(filePath, 'utf8');
+  } catch(err) {
+    console.log(err);
+  }
+}
+readFile('2.txt').then(data => {
+  console.log(data);
+});
